@@ -5,38 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finalva Systems</title>
     <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f5f7f9;
+            color: #20252A;
         }
         header {
-            background-color: #007BFF;
+            background: #007980;
             color: white;
-            padding: 20px 0;
+            padding: 3rem 1.5rem;
+            text-align: center;
         }
-        .logo {
-            width: 150px;
-            height: auto;
+        header h1 {
+            font-size: 2.4rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
         }
-        .slogan {
-            font-size: 1.2em;
-            margin: 10px 0;
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 480px;
+            margin: 0 auto;
         }
-        .contact {
-            font-size: 1.5em;
-            margin: 20px 0;
+        main {
+            max-width: 780px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem 4rem;
+        }
+        h2 {
+            font-size: 1.3rem;
+            margin: 2rem 0 0.6rem;
+            color: #007980;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+        .contact-box {
+            margin-top: 2.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-left: 4px solid #007980;
+        }
+        .contact-box a {
+            color: #007980;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+            padding-bottom: 2rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Finalva Systems Logo" class="logo">
         <h1>Finalva Systems</h1>
-        <p class="slogan">Ethically serving New Orleans tech needs</p>
-        <p class="contact">Phone: 504.344.1875</p>
+        <p>IT consulting for small businesses and nonprofits in New Orleans.</p>
     </header>
+    <main>
+        <h2>What we do</h2>
+        <p>
+            We help small organizations get their core IT under control —
+            networks that hold up, shared storage that makes sense,
+            and backup plans that won't fail when it matters.
+        </p>
+
+        <h2>Who we work with</h2>
+        <p>
+            Small businesses, nonprofits, and community organizations
+            that need real IT support without the enterprise price tag or the runaround.
+            If your team is fighting their own technology instead of doing their work,
+            that's where we come in.
+        </p>
+
+        <h2>How it works</h2>
+        <p>
+            We start with a clear assessment of what you have and what's broken.
+            You get a plain-language explanation and a realistic plan —
+            no black boxes, no unnecessary complexity.
+        </p>
+
+        <div class="contact-box">
+            <p>Ready to talk? Reach us at <a href="mailto:frank@finalva.space">hello@finalva.space</a></p>
+            <p class="contact">Phone: 504.344.1875</p>
+        </div>
+    </main>
+    <footer>
+        <p>© <span id="year"></span> Finalva Systems · New Orleans, LA</p>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
